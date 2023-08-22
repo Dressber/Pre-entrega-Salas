@@ -11,10 +11,6 @@ li {
        text-align: center;
        text-decoration: none;
     
-    a2 {
-        text-decoration: black;
-        text-transform: uppercase;
-    }
   }   
 }
 
@@ -47,7 +43,7 @@ li {
     padding: 20px;
     background-color: #fafafa;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px black(0,0,0.5);
+    box-shadow: 0px 4px 10px black(0,0,0,0.5);
 }
 .paquete {
     @include flex-column-center;
@@ -60,7 +56,7 @@ li {
     padding: 20px;
     background-color: #fafafa;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px black(0,0,0.5);
+    box-shadow: 0px 4px 10px black(0,0,0,0.5);
 } 
 .paquete2{
     @include flex-column-center;

@@ -17,8 +17,7 @@
     .logo {
         width: 70px;
         height: 60px;
-        cursor: pointer;
-        align-items: center;
+        align-items: stretch;
     }
     
     .imgC {
@@ -52,7 +51,7 @@
         margin: auto 50px;
         margin-bottom:  -195px;
         background-position: center;
-        Background-repeat: no-repeat;
+        background-repeat: no-repeat;
     }    
     
     li {
@@ -64,7 +63,7 @@
     li, a {
         font-size: 20px;
         height: 40px;
-        width: 100px;
+        width: 100%;
         border-radius: 15px;
         text-align: center;
         text-decoration: none;
@@ -117,12 +116,7 @@
     
     .colorBtn{
         background-color: #FEFB2A;
-    }
-    
-    .a2 {
-        text-decoration: black;
-        text-transform: uppercase;
-    }    
+    } 
     
     .footer {
         position: center;
@@ -178,16 +172,30 @@
         font-size: 20px;
         margin-bottom: 10px;
     }
+
+
+    .contenedor-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
     
-    conectar_con {
-        background-color: blanchedalmond;
-        color: black;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 20px;
+    .info {
+        width: 100%;
+    }
+    
+    .botones {
+        width: 100%;
         margin-top: 10px;
-        cursor: pointer;
+    }
+    
+    
+    @media (max-width: 650px) {
+        .info {
+            margin-bottom: 10px;
+        }
     }
     
     section{
@@ -207,7 +215,6 @@
     .contenedorPaq2{
         display: flex;
         grid-template-columns: repeat(3,1fr);
-        width: 100%;
         gap: 10px;
         flex-wrap: wrap
         
@@ -220,7 +227,7 @@
         padding: 20px;
         background-color: #fafafa;
         border-radius: 10px;
-        box-shadow: 0px 4px 10px black(0,0,0.5); 
+        box-shadow: 0px 4px 10px black(0,0,0,0.5); 
     }
 
     .paquete{
@@ -239,7 +246,7 @@
             padding: 20px;
             background-color: #fafafa;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px black(0,0,0.5); 
+            box-shadow: 0px 4px 10px black(0,0,0,0.5); 
         }
     
         .paquete2{
@@ -273,7 +280,7 @@
     }
     
     .estilo{
-        font-size: 1,25rem;
+        font-size: 1.25rem;
         text-align: center;
         margin-bottom: 20px;
     }
@@ -292,94 +299,77 @@
     
     /* Responsive */
     
-    @media (max-width:501){
-        .contenedorPaq{
-            font-size: 20px;
-        }
-    
-        .contenedorPaq2{
-            font-size: 20px;
-        }
-    
-        .caja{
-            display: none;
-        }
+@media (max-width: 501px) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        font-size: 20px;
     }
     
-    @media (min-width:501px) and (max-width:900px){
-        .contenedorPaq{
-            font-size: 30px;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-    
-        .navbar{
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-    
-        .contenedorPaq2{
-            font-size: 30px;
-        }
+    .caja {
+        display: none;
     }
-    
-    @media (max-width:650px){
-        .caja{
-            display: none;
-        }
-    }    
-    
-    .map-responsive{
-        overflow:hidden;
-        padding-bottom:56.25%;
-        position:relative;
-        height:0;
-    }
-    
-    .map-responsive iframe{
-        left:0;
-        top:0;
-        height:100%;
-        width:100%;
-        position:absolute;
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        font-size: 30px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 
-    
-        .conexion form{
-            width: 90vw;
-            padding-left: 0;
-            padding-right: 0;
-            width: 100%;
-        }
-    
-    
-    @media screen and (orientation:landscape) {
-        .contenedorPaq{
-            text-transform: uppercase;
-        }
-    
-        .contenedorPaq2 {
-            text-transform: uppercase;
-        }
-        
+    .navbar {
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
-    
-    @media screen and (orientation:portrait) {
-        .contenedorPaq{
-            text-transform: uppercase;
-        }
-        .contenedorPaq2 {
-            text-transform: uppercase;
-        }
-        
+}
+
+@media (max-width: 650px) {
+    .caja {
+        display: none;
     }
+}
+
+@media screen and (orientation: landscape) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        text-transform: uppercase;
+    }
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
 
+.conexion form {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /*# sourceMappingURL=estilo.css.map */
