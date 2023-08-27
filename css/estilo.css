@@ -163,25 +163,6 @@
         color: red;
     }
     
-    cuadrados {
-        display: block;
-        width: 50%;
-        padding: 10px;
-        border: 2px solid whitesmoke;
-        border-radius: 5px;
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-
-    .contenedor-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    
     .info {
         width: 100%;
     }
@@ -202,7 +183,108 @@
         display: grid;
         grid-template-areas: "card card card";
     }
+
+    .seccion{
+        display: flex;
+        align-items: center;
+    }
+
+    .miniseccion{
+        flex: 1;
+    }
+
+    .miniseccion p {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .image-conter{
+        max-width: 50%;
+        margin-right: 15px;
+    }
+
+    .image-conter{
+        max-width: 50%;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .image{
+        max-width: 100%;
+        height: auto;
+
+    }
+
+    .seccion2{
+        display: flex;
+        align-items: center;
+    }
+
+    .miniseccion2{
+        flex: 1;
+        align-items: center;
+    }
     
+    .miniseccion2 p {
+        text-align: left;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    
+    .image-conter2{
+        max-width: 50%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .image-left{
+        max-width: 95%;
+        height: auto;
+    }
+
+    /* Cuadro de contacto */
+
+    .icono-buzon{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .left-icono,
+    .icono-right {
+        max-width: 20%;
+    }
+
+    .buzon{
+        padding: 20px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        margin-left: 10px;
+        flex: 1;
+    }
+
+    .botones{
+        text-align: right;
+    }
+
+@media screen and (max-width: 1107px) {
+    .icono-buzon{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .buzon{
+        margin-left: 0;
+    }
+}    
+
+    .left-icono,
+    .icono-right{
+        max-width: 50%;
+        margin-bottom: 10px;
+    }
     /* Cards */
     
     .contenedorPaq{
@@ -227,15 +309,17 @@
         padding: 20px;
         background-color: #fafafa;
         border-radius: 10px;
-        box-shadow: 0px 4px 10px black(0,0,0,0.5); 
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .paquete{
         background-color: #fafafa;
-        transition: all 3s;}
+        transition: background-color 0.3s; height: 0.3s; width: 0.3s;
+        cursor: pointer;
+    }
         .paquete:hover{
             background-color: yellowgreen;
-            height: 700px;
+            height: auto;
             width: 100%;
         }
     
@@ -246,14 +330,18 @@
             padding: 20px;
             background-color: #fafafa;
             border-radius: 10px;
-            box-shadow: 0px 4px 10px black(0,0,0,0.5); 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
         }
     
         .paquete2{
             background-color: #fafafa;
-            transition: all 3s;}
+            transition: background-color 0.3s; height: 0.3s; width: 0.3s;
+            cursor: pointer;
+        }
             .paquete2:hover{
                 background-color: yellowgreen;
+                height: auto;
+                width: 100%;
             }
 
     .fotopaquete {
@@ -298,6 +386,16 @@
     }
     
     /* Responsive */
+
+
+    
+@media (max-width:900px){
+    .seccion,
+    .seccion2{
+        flex-direction: column;
+        align-items: center;
+    }
+}
     
 @media (max-width: 501px) {
     .contenedorPaq,
