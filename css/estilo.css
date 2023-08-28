@@ -98,7 +98,7 @@
     mask-size: auto;
     }
     
-    /* Quedo designado con su primer nombre, aunque ya no cumpla con el mismo */
+    /* (Quedo designado con su primer nombre, aunque ya no cumpla con el mismo) */
     
     .fuentes{
         font-size: auto;
@@ -117,7 +117,39 @@
     .colorBtn{
         background-color: #FEFB2A;
     } 
+
+    .bottom-icons{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .bottom-icons::before,
+    .bottom-icons::after{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #f0f0f0;
+        transform: rotate(45deg);
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .bottom-icons::before{
+        top: -15px;
+        left: -15px;
+    }
     
+    .bottom-icons::after{
+        bottom: -15px;
+        right: -15px;
+    }
+
+
     .footer {
         position: center;
         left: 0;
@@ -250,6 +282,10 @@
         justify-content: space-between;
     }
 
+    .left-icono{
+        margin-top: 20px;
+    }
+
     .left-icono,
     .icono-right {
         max-width: 20%;
@@ -285,6 +321,7 @@
         max-width: 50%;
         margin-bottom: 10px;
     }
+    
     /* Cards */
     
     .contenedorPaq{
@@ -387,7 +424,13 @@
     
     /* Responsive */
 
-
+@media (max-width: 701px){
+    .bottom-icons{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
     
 @media (max-width:900px){
     .seccion,
