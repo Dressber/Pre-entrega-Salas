@@ -1,0 +1,130 @@
+$background-color_1: #fafafa;
+$background-color_2: yellowgreen;
+$background-color_3: #FEFB2A;
+$color_1: blue;
+$font-family_1: 'Segoe UI', Arial, Helvetica, 'Times New Roman', Times, Verdana, sans-serif;
+$background-color_1: #01ECFB;
+$background-color_2: #fafafa;
+$background-color_3: #FEFB2A;
+$background-color_4: #f0f0f0;
+
+@keyframes texto {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+/* (Quedo designado con su primer nombre, aunque ya no cumpla con el mismo) */
+
+
+	.flex {
+		display: flex;
+		list-style: none;
+		flex-direction: row;
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		background-color: $background-color_1;
+		margin: auto 50px;
+		margin-bottom: -195px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	li {
+		display: inline-block;
+		margin: 0 50px;
+		padding: 0;
+		font-size: 20px;
+		height: 40px;
+		width: 100%;
+		border-radius: 15px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.texto {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.azul {
+		animation-name: texto;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
+		text-align: center;
+		font-family: $font-family_1;
+		font-size: 15px;
+		background-color: $background-color_2;
+		mask-size: auto;
+	}
+
+	.fuentes {
+		font-size: auto;
+		padding-left: auto;
+		text-transform: uppercase;
+	}
+
+	.parrafo {
+		text-align: center;
+	}
+
+	#final {
+		color: $color_1;
+	}
+
+	.colorBtn {
+		background-color: $background-color_3;
+	}
+
+	.bottom-icons {
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+		background-color: $background-color_4;
+		border: 1px solid #ddd;
+		border-radius: 10px;
+		position: relative;
+		&::before {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background-color: $background-color_4;
+			transform: rotate(45deg);
+			border-radius: 50%;
+			z-index: -1;
+			top: -15px;
+			left: -15px;
+		}
+		&::after {
+			bottom: -15px;
+			right: -15px;
+		}
+	}
+
+
+a {
+	font-size: 20px;
+	height: 40px;
+	width: 100%;
+	border-radius: 15px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.bottom-icons {
+	&::after {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		background-color: $background-color_4;
+		transform: rotate(45deg);
+		border-radius: 50%;
+		z-index: -1;
+	}
+}

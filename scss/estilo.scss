@@ -1,3 +1,182 @@
+@import 'variables';
+@import 'header';
+@import 'cards';
+@import 'footer';
+
+$background-color_1: #fafafa;
+$background-color_2: yellowgreen;
+$background-color_3: #FEFB2A;
+$color_1: blue;
+$font-family_1: 'Segoe UI', Arial, Helvetica, 'Times New Roman', Times, Verdana, sans-serif;
+$background-color_1: #01ECFB;
+$background-color_2: #fafafa;
+$background-color_3: #FEFB2A;
+$background-color_4: #f0f0f0;
+
+
+.caja {    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 1000px;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: rgb(13, 13, 249);
+    z-index: 0;
+}
+
+.elmundo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: red;
+}
+
+.info {
+    width: 100%;
+}
+
+.botones {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 650px) {
+    .info {
+        margin-bottom: 10px;
+    }
+}
+
+section{
+    display: grid;
+    grid-template-areas: "card card card";
+}
+
+.seccion{
+    display: flex;
+    align-items: center;
+}
+
+.miniseccion{
+    flex: 1;
+}
+
+.miniseccion p {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.image-conter{
+    max-width: 50%;
+    margin-right: 15px;
+}
+
+.image-conter{
+    max-width: 50%;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+
+}
+
+.seccion2{
+    display: flex;
+    align-items: center;
+}
+
+.miniseccion2{
+    flex: 1;
+    align-items: center;
+}
+
+.miniseccion2 p {
+    text-align: left;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.image-conter2{
+    max-width: 50%;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.image-left{
+    max-width: 95%;
+    height: auto;
+}
+
+/* Cuadro de contacto */
+
+.icono-buzon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-icono{
+    margin-top: 20px;
+}
+
+.left-icono,
+.icono-right {
+    max-width: 20%;
+}
+
+.buzon{
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-left: 10px;
+    flex: 1;
+}
+
+.botones{
+    text-align: right;
+}
+
+@media screen and (max-width: 1107px) {
+.icono-buzon{
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media screen and (max-width: 480px){
+.buzon{
+    margin-left: 0;
+}
+}    
+
+.left-icono,
+.icono-right{
+    max-width: 50%;
+    margin-bottom: 10px;
+}
+
 li {
     display: inline-block;
     margin: 0 50px;
@@ -76,4 +255,95 @@ li {
     
 button{
     @include inline-block-uppercase;
+}
+
+/* Responsive */
+
+@media (max-width: 701px){
+    .bottom-icons{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+}
+    
+@media (max-width:900px){
+    .seccion,
+    .seccion2{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+    
+@media (max-width: 501px) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        font-size: 20px;
+    }
+    
+    .caja {
+        display: none;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 900px) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        font-size: 30px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar {
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .caja {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .contenedorPaq,
+    .contenedorPaq2 {
+        text-transform: uppercase;
+    }
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+.conexion form {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }

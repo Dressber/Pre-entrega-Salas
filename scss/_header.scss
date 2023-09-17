@@ -1,0 +1,30 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(to left, #FEFB2A ,100%, transparent 70%);
+	max-width: 3000px;
+	height: 100px;
+	padding: 20px;
+	border-radius: 5px;
+	position: sticky;
+	top: 0;
+}
+header {
+	.logo {
+		width: 70px;
+		height: 60px;
+		align-items: stretch;
+	}
+	.imgC {
+		height: 400px;
+		object-fit: cover;
+	}
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	li {
+		list-style: none;
+	}
+}
